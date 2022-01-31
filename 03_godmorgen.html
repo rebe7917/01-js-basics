@@ -7,11 +7,19 @@
     <title>Document</title>
   </head>
   <body>
-<main>
-    
-</main>
+ 
     <script>
-
+        let time = new Date ().getHours();
+      
+        if (time < 5) {
+            console.log("godnat");
+        } else if (time < 10) {
+         console.log("godmorgen");
+        } else if (time < 18){
+          console.log("goddag");
+        } else {
+            console.log("godaften");
+        }
     </script>
   </body>
 </html>
