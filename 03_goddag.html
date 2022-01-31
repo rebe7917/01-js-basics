@@ -7,10 +7,17 @@
     <title>Document</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
+   
+       <input type ="tekst" Id="navn">
+  <button>klik og klik i konsollen </button>
+   
     <script>
-  
+      document.querySelector("button").addEventListener("click", buttonClicked);
+      
+      function buttonClicked(){
+      let brugerNavn = document.querySelector("#navn").value;
+      console.log(`tillykke dit navn er ${brugerNavn}`);
+      } 
     </script>
   </body>
 </html>
