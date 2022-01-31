@@ -11,8 +11,17 @@
       let myHours = 3;
       let co2UdledtIKgVedFlyrejse = myHours * 109;
 
-      let myResult = `Ved ${myHours} timers flyrejse har du udledt ${co2UdledtIKgVedFlyrejse} kg i co2`;
-      console.log(myResult);
+      let myResult = `du har fløjet ${myHours} timer og udledt ${co2UdledtIKgVedFlyrejse} kg i co2`;
+      
+      if(co2UdledtIKgVedFlyrejse < 100){
+        console.log(`${myResult} Tæt på Thunberg`);
+      }else if (co2UdledtIKgVedFlyrejse >=100 && co2UdledtIKgVedFlyrejse < 200){
+         console.log(`${myResult} ja ja, du behøver ikke at melde dig ud af Å!`);
+      }else if (co2UdledtIKgVedFlyrejse >=200 && co2UdledtIKgVedFlyrejse < 600){
+          console.log(`${myResult}  Det er godt for turismeni nordeuropa`);
+      }else{
+          console.log(`${myResult} nå ja vi kunne jo altid kolonisere en anden planet...`);
+      }
     </script>
   </body>
 </html>
