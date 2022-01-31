@@ -10,14 +10,19 @@
     <header></header>
     <main></main>
     <script>
-      let forNavn = "Martin"; // tekstlet
-      let alder = 58; // tallet
-      let enlig = false; // booleanlet
-      let køn; // ingen værditildeling endnu
+      let længde = 20;
+      let bredde = 25;
+      let areal = længde * bredde;
+      let resultat;
 
-      const moms = 0.25; // momsen er konstant - skal ikke ændres i programmet
-      let greeting = "Hello World";
-      console.log(greeting);
+      if (areal < 100) {
+        resultat = "arealet er for lille";
+      } else if (areal < 200) {
+        resultat = "arealet er ok";
+      } else {
+        resultat = "arealet er for stort";
+      }
+      console.log(resultat);
     </script>
   </body>
 </html>
