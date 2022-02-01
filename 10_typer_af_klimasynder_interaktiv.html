@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+;<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,29 +7,33 @@
     <title>Document</title>
   </head>
   <body>
+    <main>
+      <p>indtast længden på din rejse i timer</p>
+      <input type="text" id="myHours">
+      <button>klik og beregn udslip,  kig i konsollen</button>
+    </main>
     <script>
-      let myHours = 3;
-      let co2UdledtIKgVedFlyrejse = myHours * 109;
+     document.querySelector("button").addEventListener("click", buttonClicked);
 
-      let myResult = `du har fløjet ${myHours} timer og udledt ${co2UdledtIKgVedFlyrejse} kg i co2`;
+     function buttonClicked(){
+       let myHours = document.querySelector("#myHours").value;
+       let co2UdledtIKgVedFlyrejse = myHours * 109;
+       let resultat = `du har fløjet ${myHours} timer og udledt ${co2UdledtIKgVedFlyrejse} kg co2`;
 
-      if (co2UdledtIKgVedFlyrejse < 100) {
-        console.log(`${myResult} Tæt på Thunberg`);
-      } else if (
-        co2UdledtIKgVedFlyrejse >= 100 &&
-        co2UdledtIKgVedFlyrejse < 200
-      ) {
-        console.log(`${myResult} ja ja, du behøver ikke at melde dig ud af Å!`);
-      } else if (
-        co2UdledtIKgVedFlyrejse >= 200 &&
-        co2UdledtIKgVedFlyrejse < 600
-      ) {
-        console.log(`${myResult}  Det er godt for turismeni nordeuropa`);
-      } else {
-        console.log(
-          `${myResult} nå ja vi kunne jo altid kolonisere en anden planet...`
-        );
-      }
+       if(isNaN(co2UdledtIKgVedFlyrejse)){
+
+       }else if (co2UdledtIKgVedFlyrejse <= 0){
+
+       }else{
+         resultat= `du har udledt ${co2UdledtIKgVedFlyrejse} kg co2`
+       }
+       console.log(resultat);
+     }
+     function areal (co2UdledtIKgVedFlyrejse){
+       return myHours * 109;
+     }
+        
+      
     </script>
   </body>
 </html>
